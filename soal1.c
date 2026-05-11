@@ -117,10 +117,10 @@
         printf("MAX_VERTEX %d", maxV);
         printf("\n");
         int c = -1;
-        bool foundIsolated = false;
+        bool isolasi = false;
         for(int i=0; i<n; i++){
             if(degree[i] == 0){
-                if (!foundIsolated) {
+                if (!isolasi) {
                 printf("ISOLATED");
                 foundIsolated = true;
             }
@@ -128,7 +128,7 @@
         }
     }
 
-        if(!foundIsolated){
+        if(!isolasi){
             printf("ISOLATED NONE");
         }
     printf("\n");
@@ -139,7 +139,7 @@
             //printf("ISOLATED NONE\n");
         //} else {
            // printf("ISOLATED %d\n", c);
-        //} salah ajg
+        //}
 
 
 
