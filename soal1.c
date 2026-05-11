@@ -122,7 +122,6 @@ int main() {
         }
     }
     printf("MAX_VERTEX %d\n", maxV);
-\\skuty
 
    return 0;
 }
