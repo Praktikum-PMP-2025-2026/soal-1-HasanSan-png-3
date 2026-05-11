@@ -116,6 +116,8 @@
             }
         }
         printf("MAX_VERTEX %d", maxV);
+        printf("\n");
+        int c = -1;
         bool foundIsolated = false;
         printf("ISOLATED");
         for(int i=0; i<n; i++){
@@ -124,6 +126,10 @@
             foundIsolated = true;
         }
 
+    }
+
+    if(!foundIsolated){
+        printf("ISOLATED NONE");
     }
     printf("\n");
 
