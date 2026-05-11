@@ -80,11 +80,16 @@ int main() {
 
     bool foundIsolated = false;
     printf("ISOLATED");
-    for(int i=0; i<n; i++){
+    for(int i=0; i<n; i++){ 
         if(degree[i] == 0){
             printf(" %d", i);
             foundIsolated = true;
         }
+        else if
+        {
+            printf(" NONE");
+        }
+        
     }
     printf("\n");
     
