@@ -121,7 +121,7 @@
         printf("ISOLATED");
         for(int i=0; i<n; i++){
             if(degree[i] == 0){
-                printf("%d", i);
+                printf(" %d", i);
                 c = i;
                 break; 
             }
