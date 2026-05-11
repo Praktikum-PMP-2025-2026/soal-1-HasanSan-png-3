@@ -121,7 +121,9 @@ int main() {
             maxV = i;
         }
     }
-    printf("MAX_VERTEX %d\n", maxV);
+    printf("MAX_VERTEX %d", maxV);
+    printf("\n");
+
 
    return 0;
 }
