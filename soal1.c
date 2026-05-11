@@ -124,15 +124,12 @@ int main() {
             break; 
         }
     }
-    if (c == -1)
-    {
-        printf("ISOLATED NONE%d\n", c);
+
+    if (c == -1) {
+        printf("ISOLATED NONE\n");
+    } else {
+        printf("ISOLATED %d\n", c);
     }
-    else
-    {
-         printf("ISOLATED %d\n", c);
-    }
-    
 
 
    return 0;
