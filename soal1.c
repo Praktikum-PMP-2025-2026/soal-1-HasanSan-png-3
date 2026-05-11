@@ -128,10 +128,6 @@ int main() {
             c = i;
             break; 
         }
-        else if (c == -1)
-        {
-            printf("ISOLATED NONE %d\n");
-        }
         
     }
     printf("ISOLATED %d\n", c);
