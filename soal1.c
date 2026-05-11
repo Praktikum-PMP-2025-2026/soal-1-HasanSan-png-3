@@ -1,32 +1,30 @@
 //** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2024/2025
-//** Modul : 05 - Foundation of Algorithm
-//** Hari dan Tanggal : Senin, 11 May 2026
-//** Nama (NIM) : Hasan Al Mutawakkil (13224080)
-//** Nama File : TP_5_PMP.c
-//** Deskripsi : Mencari Leluhur (Analisis Graph)
+//* Modul : 05 - Foundation of Algorithm
+//* Hari dan Tanggal : Senin, 11 May 2026
+//* Nama (NIM) : Hasan Al Mutawakkil (13224080)
+//* Nama File : TP_5_PMP.c
+//* Deskripsi : Mencari Leluhur
+
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
-// Struktur Node untuk Adjacency List
 struct Node {
     int data;
     struct Node* next;
 };
 
-// Struktur List (Head pointer)
 struct List {
     struct Node* head;
 };
 
-// Struktur Graph
 struct Graph {
     int vertices;
     struct List* array;
 };
 
-// Fungsi membuat Node baru
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -34,7 +32,6 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Fungsi membuat Graph baru
 struct Graph* createGraph(int vertices) {
     struct Graph* graph = (struct Graph*)malloc(sizeof(struct Graph));
     graph->vertices = vertices;
@@ -45,11 +42,12 @@ struct Graph* createGraph(int vertices) {
     return graph;
 }
 
-// Fungsi menambahkan Edge (Directed Graph)
 void addEdge(struct Graph* graph, int src, int dest) {
     struct Node* newNode = createNode(dest);
     newNode->next = graph->array[src].head;
     graph->array[src].head = newNode;
+
+
 }
 
 void DFS(struct Graph* graph, int vertex, bool visited[]) {
@@ -79,50 +77,65 @@ void DFSTraversal(struct Graph* graph, int* order, int orderSize) {
 }
 
 int main() {
-    int V;
+    int n;
+    int arr[99]; 
+    scanf("%d", &n);
 
-    if (scanf("%d", &V) != 1) return 0;
+    if (condition)
+    {
+        /* code */
+    }
     
-    struct Graph* g = createGraph(V);
-    int matrix[V][V];
-    int degree[V];
-    
-    // Inisialisasi degree 0
-    for(int i=0; i<V; i++) degree[i] = 0;
-    for (int i = 0; i < V; i++) {
-        for (int j = 0; j < V; j++) {
+
+    struct Graph* g = createGraph(n);
+    int matrix[n][n];
+    int degree[n];
+
+    for (int i = 0; i < n; i++) {
+    degree[i] = 0;
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
             scanf("%d", &matrix[i][j]);
             if (matrix[i][j] == 1) {
                 addEdge(g, i, j);
-                degree[i]++; // Asumsi directed, degree = out-degree
+                degree[i]++; 
             }
         }
     }
-
-    // 1. Output DEGREE
-    for(int i=0; i<V; i++){
+    
+    for(int i=0; i<n; i++){
         printf("DEGREE %d %d\n", i, degree[i]);
     }
 
-    int maxDegree = -1;
-    int maxVertex = -1;
-    for(int i=0; i<V; i++){
-        if(degree[i] > maxDegree){
-            maxDegree = degree[i];
-            maxVertex = i;
+    
+
+  
+
+
+    int maxD = -1, maxV =-1;
+    for(int i=0; i<n; i++){
+        if(degree[i] > maxD){
+            maxD = degree[i];
+            maxV = i;
         }
     }
-    printf("MAX_VERTEX %d\n", maxVertex);
-
-    // 3. Mencari ISOLATED Vertex (Degree 0)
-    int isolated = -1;
-    for(int i=0; i<V; i++){
+    printf("MAX_VERTEX %d", maxV);
+    printf("\n");
+    int c = -1;
+    for(int i=0; i<n; i++){
         if(degree[i] == 0){
-            isolated = i;
-            break; // Ambil yang pertama jika ada banyak
+            c = i;
+            break; 
         }
+        else if (c == -1)
+        {
+            printf("ISOLATED NONE %d\n");
+        }
+        
     }
-    printf("ISOLATED %d\n", isolated);
+    printf("ISOLATED %d\n", c);
 
-    return 0;
+
+   return 0;
 }
