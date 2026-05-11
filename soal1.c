@@ -117,26 +117,20 @@
         }
         printf("MAX_VERTEX %d", maxV);
         printf("\n");
-        printf("ISOLATED");
         int c = -1;
+        printf("ISOLATED");
         for(int i=0; i<n; i++){
             if(degree[i] == 0){
                 printf(" %d", i);
                 c = i;
+                break; 
             }
+            else if (degree[i] == -1)
+            {
+                printf("ISOLATED NONE\n");
+            }
+            
         }
-
-        printf("\n");
-
-        //if (c == -1) {
-            //("ISOLATED NONE\n");
-        //} else {
-            //printf("ISOLATED %d\n", c);
-        //} mpruy ah
-
-        
-
-
     
 
 
