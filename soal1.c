@@ -2,8 +2,8 @@
     //* Modul : 05 - Foundation of Algorithm
     //* Hari dan Tanggal : Senin, 11 May 2026
     //* Nama (NIM) : Hasan Al Mutawakkil (13224080)
-    //* Nama File : TP_5_PMP.c
-    //* Deskripsi : Mencari Leluhur
+    //* Nama File : Prak_5_PMP.c
+    //* Deskripsi : Mencari Lorong
 
 
     #include <stdio.h>
@@ -85,7 +85,6 @@
         struct Graph* g = createGraph(n);
         int matrix[n][n];
         int degree[n];
-
         for (int i = 0; i < n; i++) {
         degree[i] = 0;
         }
@@ -140,9 +139,11 @@
             //printf("ISOLATED NONE\n");
         //} else {
            // printf("ISOLATED %d\n", c);
-        //}
+        //} salah ajg
 
 
 
     return 0;
     }
+
+    //https://www.geeksforgeeks.org/c/c-program-for-depth-first-search-or-dfs-for-a-graph/
