@@ -105,14 +105,8 @@ int main() {
 
     
 
-    int c = -1;
-    for(int i=0; i<n; i++){
-        if(degree[i] == 0){
-            c = i;
-            break; 
-        }
-    }
-    printf("ISOLATED %d\n", c);
+  
+
 
     int maxD = -1, maxV =-1;
     for(int i=0; i<n; i++){
@@ -123,6 +117,14 @@ int main() {
     }
     printf("MAX_VERTEX %d", maxV);
     printf("\n");
+        int c = -1;
+    for(int i=0; i<n; i++){
+        if(degree[i] == 0){
+            c = i;
+            break; 
+        }
+    }
+    printf("ISOLATED %d\n", c);
 
 
    return 0;
