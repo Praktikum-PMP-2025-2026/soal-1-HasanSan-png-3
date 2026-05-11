@@ -122,7 +122,7 @@
             if(degree[i] == 0){
                 if (!isolasi) {
                 printf("ISOLATED");
-                foundIsolated = true;
+                isolasi = true;
             }
             printf(" %d", i);
         }
