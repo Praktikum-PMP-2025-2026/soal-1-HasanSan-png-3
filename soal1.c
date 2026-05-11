@@ -81,11 +81,6 @@ int main() {
     int arr[99]; 
     scanf("%d", &n);
 
-    if (condition)
-    {
-        /* code */
-    }
-    
 
     struct Graph* g = createGraph(n);
     int matrix[n][n];
@@ -128,9 +123,16 @@ int main() {
             c = i;
             break; 
         }
-        
     }
-    printf("ISOLATED %d\n", c);
+    if (c == -1)
+    {
+        printf("ISOLATED NONE%d\n", c);
+    }
+    else
+    {
+         printf("ISOLATED %d\n", c);
+    }
+    
 
 
    return 0;
