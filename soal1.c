@@ -123,11 +123,7 @@
             printf(" %d", i);
             foundIsolated = true;
         }
-            else
-        {
-            printf(" NONE");
-        }
-        
+
     }
     printf("\n");
 
